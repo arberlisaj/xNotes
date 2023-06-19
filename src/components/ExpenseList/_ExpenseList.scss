@@ -1,0 +1,31 @@
+@use "../../Styles/variables";
+table {
+  margin-top: 20px;
+  width: 100%;
+  border-collapse: collapse;
+  background-color: variables.$light-gray;
+  tr,
+  td,
+  th {
+    padding: 10px;
+  }
+  tr:nth-of-type(even) {
+    background-color: variables.$white;
+  }
+
+  thead,
+  tfoot {
+    background-color: rgb(198, 198, 198);
+    color: variables.$white;
+  }
+  button {
+    border: none;
+    display: grid;
+    place-content: center;
+    padding: 5px 10px;
+    cursor: pointer;
+    color: variables.$danger-clr;
+
+    background-color: transparent;
+  }
+}
