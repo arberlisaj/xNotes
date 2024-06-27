@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: sans-serif;
+}
+p {
+  word-wrap: break-word;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+@layer base {
+  body {
+    @apply dark:bg-gray-900 dark:text-white;
+  }
+  header .link {
+    @apply rounded-sm p-2 text-sm hover:bg-slate-100 active:bg-gray-200 dark:active:bg-gray-800 dark:hover:bg-gray-700;
+  }
+  th {
+    @apply px-6 text-center border-x p-2 font-normal text-sm bg-gray-100 dark:bg-slate-800 border-gray-300 dark:border-gray-600;
+  }
+  td {
+    @apply p-2 px-1 text-center border break-all border-gray-300 dark:border-gray-600;
+  }
+  label {
+    @apply dark:text-gray-200 block capitalize mt-1;
+  }
+  input {
+    @apply w-full p-2 text-sm mb-1 max-w-[700px] outline-none  dark:bg-gray-700 dark:text-gray-200 border dark:border-gray-700 border-gray-300 rounded text-black focus:border-blue-600;
+  }
+  textarea {
+    @apply focus:border-blue-600;
+  }
+  select {
+    @apply focus:border-blue-600 outline-none bg-white dark:bg-gray-700 dark:text-gray-100 dark:border-gray-700 appearance-none border-gray-300 text-gray-900 text-sm rounded border block w-full max-w-[700px] p-2 cursor-pointer;
+  }
+  option {
+    @apply: border-none;
+  }
+}
